@@ -61,6 +61,29 @@
     .float-card{position:absolute;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 24px 50px rgba(13,13,18,.13);font-weight:800;letter-spacing:-.02em}
     .float-card.one{left:0;bottom:110px;max-width:220px}
     .float-card.two{right:10px;top:110px;max-width:210px;background:var(--ink);color:var(--paper)}
+
+    .editorial-stack{position:absolute;inset:0;pointer-events:none}
+    .photo-card{position:absolute;overflow:hidden;border-radius:28px;border:1px solid rgba(255,250,241,.36);box-shadow:0 26px 68px rgba(13,13,18,.20);background:var(--ink)}
+    .photo-card img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.82) contrast(1.08) brightness(.82)}
+    .photo-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,18,0) 24%,rgba(13,13,18,.62) 100%)}
+    .photo-card b{position:absolute;left:18px;bottom:16px;z-index:2;color:var(--paper);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+    .photo-card.culture{width:220px;height:286px;right:0;bottom:42px;transform:rotate(-4deg)}
+    .photo-card.money{width:190px;height:136px;left:22px;top:42px;transform:rotate(-3deg)}
+    .photo-card.sports{width:210px;height:146px;right:36px;top:34px;transform:rotate(4deg)}
+    .pulse{padding:36px 0 86px;background:var(--cream)}
+    .pulse-grid{width:min(1180px,calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
+    .pulse-main,.pulse-side{position:relative;overflow:hidden;border-radius:34px;min-height:430px;border:1px solid var(--line);background:var(--ink);box-shadow:0 28px 70px rgba(13,13,18,.13)}
+    .pulse-side{display:grid;grid-template-rows:1fr 1fr;gap:18px;background:transparent;border:0;box-shadow:none;min-height:430px}
+    .pulse-tile{position:relative;overflow:hidden;border-radius:30px;border:1px solid var(--line);background:var(--ink)}
+    .pulse-main img,.pulse-tile img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.8) contrast(1.06) brightness(.78)}
+    .pulse-main:after,.pulse-tile:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,18,.08),rgba(13,13,18,.74))}
+    .pulse-copy{position:absolute;left:30px;right:30px;bottom:28px;z-index:2;color:var(--paper)}
+    .pulse-kicker{display:inline-flex;background:var(--violet);color:#fff;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+    .pulse-copy h2{font-size:clamp(36px,4.8vw,72px);max-width:720px}
+    .pulse-copy p{margin:14px 0 0;color:rgba(255,250,241,.78);font-size:18px;line-height:1.45;max-width:620px;font-weight:600}
+    .pulse-tile .pulse-copy{left:22px;right:22px;bottom:20px}.pulse-tile h3{margin:0;color:var(--paper);font-size:28px;line-height:1;letter-spacing:-.055em}.pulse-tile p{margin:8px 0 0;color:rgba(255,250,241,.75);font-size:14px;line-height:1.35;font-weight:600}
+    .desk-photo{height:128px;border-radius:22px;margin:-4px -4px 22px;overflow:hidden;background:rgba(255,250,241,.08)}
+    .desk-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.78) contrast(1.08) brightness(.82)}
     .sections{background:var(--ink);color:var(--paper);padding:82px 0 90px}
     .inner{width:min(1180px,calc(100% - 40px));margin:0 auto}
     .section-head{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:32px}
@@ -91,7 +114,7 @@
     .footer-row{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,250,241,.62)}
     .footer a{color:var(--paper)}
     @media (max-width:900px){
-      .hero{grid-template-columns:1fr;padding-top:34px;gap:38px}.visual{min-height:560px}.float-card{display:none}.desk-grid{grid-template-columns:1fr}.section-head,.split{display:block}.section-copy{margin-top:18px}.waitlist{margin-top:42px}.nav-actions .ghost{display:none}.brand img{width:118px}h1{font-size:58px}.lead{font-size:22px}.form{display:grid;border-radius:24px}.form input{min-height:48px}.form button{min-height:48px}.phone{width:min(340px,100%)}}
+      .hero{grid-template-columns:1fr;padding-top:34px;gap:38px}.visual{min-height:600px}.float-card{display:none}.desk-grid{grid-template-columns:1fr}.section-head,.split{display:block}.section-copy{margin-top:18px}.waitlist{margin-top:42px}.nav-actions .ghost{display:none}.brand img{width:118px}h1{font-size:58px}.lead{font-size:22px}.form{display:grid;border-radius:24px}.form input{min-height:48px}.form button{min-height:48px}.phone{width:min(330px,100%)}.photo-card.culture{right:4px;bottom:18px;width:170px;height:218px}.photo-card.money{left:0;top:18px;width:150px;height:110px}.photo-card.sports{right:0;top:66px;width:150px;height:108px}.pulse-grid{grid-template-columns:1fr}.pulse-main{min-height:500px}.pulse-side{min-height:520px}.pulse-copy{left:22px;right:22px;bottom:22px}.desk-photo{height:190px}}
   </style>
 </head>
 <body>
@@ -119,6 +142,12 @@
         </div>
       </div>
       <div class="visual" aria-hidden="true">
+
+        <div class="editorial-stack">
+          <figure class="photo-card money"><img src="assets/editorial/money.jpg" alt=""><b>Money</b></figure>
+          <figure class="photo-card sports"><img src="assets/editorial/sports.jpg" alt=""><b>Sports</b></figure>
+          <figure class="photo-card culture"><img src="assets/editorial/culture.jpg" alt=""><b>Culture</b></figure>
+        </div>
         <div class="float-card one">What’s happening. What’s moving. What’s next.</div>
         <div class="float-card two">Signal over noise.</div>
         <div class="phone">
@@ -134,6 +163,31 @@
       </div>
     </section>
 
+
+
+    <section class="pulse" aria-labelledby="pulse-title">
+      <div class="pulse-grid">
+        <article class="pulse-main">
+          <img src="assets/editorial/culture.jpg" alt="A live culture moment in a festival setting">
+          <div class="pulse-copy">
+            <span class="pulse-kicker">Signal watch</span>
+            <h2 id="pulse-title">Built for the moments people need context on.</h2>
+            <p>BOT turns the moving parts of Black culture — events, policy, business, tech, sports, and community — into a cleaner signal.</p>
+          </div>
+        </article>
+        <div class="pulse-side">
+          <article class="pulse-tile">
+            <img src="assets/editorial/future.jpg" alt="Students at a STEM event">
+            <div class="pulse-copy"><h3>Future watch</h3><p>AI, tech, students, founders, and what is coming next.</p></div>
+          </article>
+          <article class="pulse-tile">
+            <img src="assets/editorial/life.jpg" alt="A runner on the road">
+            <div class="pulse-copy"><h3>Life in motion</h3><p>Wellness, travel, style, food, family, and everyday culture.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="sections" aria-labelledby="cover-title">
       <div class="inner">
         <div class="section-head">
@@ -141,12 +195,12 @@
           <p class="section-copy">BOT follows the Black angle across six desks — not to chase every headline, but to find the signal worth knowing.</p>
         </div>
         <div class="desk-grid">
-          <article class="desk"><div class="desk-num">01</div><h3>Culture</h3><p>Music, film, creators, art, internet culture, and the moments shaping the conversation.</p></article>
-          <article class="desk"><div class="desk-num">02</div><h3>Money</h3><p>Black business, careers, ownership, deals, policy, and economic power.</p></article>
-          <article class="desk"><div class="desk-num">03</div><h3>Politics</h3><p>Power, policy, courts, voting, schools, housing, rights, and everyday impact.</p></article>
-          <article class="desk"><div class="desk-num">04</div><h3>Future</h3><p>AI, tech, innovation, digital culture, and what Black audiences should watch next.</p></article>
-          <article class="desk"><div class="desk-num">05</div><h3>Sports</h3><p>Athletes, HBCUs, sports business, ownership, culture, and the game beyond the game.</p></article>
-          <article class="desk"><div class="desk-num">06</div><h3>Community</h3><p>Local wins, civic power, wellness, food, travel, family, and stories affecting Black life.</p></article>
+          <article class="desk"><div class="desk-photo"><img src="assets/editorial/culture.jpg" alt="Culture desk visual"></div><div class="desk-num">01</div><h3>Culture</h3><p>Music, film, creators, art, internet culture, and the moments shaping the conversation.</p></article>
+          <article class="desk"><div class="desk-photo"><img src="assets/editorial/money.jpg" alt="Money desk visual"></div><div class="desk-num">02</div><h3>Money</h3><p>Black business, careers, ownership, deals, policy, and economic power.</p></article>
+          <article class="desk"><div class="desk-photo"><img src="assets/editorial/community.jpg" alt="Politics desk visual"></div><div class="desk-num">03</div><h3>Politics</h3><p>Power, policy, courts, voting, schools, housing, rights, and everyday impact.</p></article>
+          <article class="desk"><div class="desk-photo"><img src="assets/editorial/future.jpg" alt="Future desk visual"></div><div class="desk-num">04</div><h3>Future</h3><p>AI, tech, innovation, digital culture, and what Black audiences should watch next.</p></article>
+          <article class="desk"><div class="desk-photo"><img src="assets/editorial/sports.jpg" alt="Sports desk visual"></div><div class="desk-num">05</div><h3>Sports</h3><p>Athletes, HBCUs, sports business, ownership, culture, and the game beyond the game.</p></article>
+          <article class="desk"><div class="desk-photo"><img src="assets/editorial/life.jpg" alt="Community desk visual"></div><div class="desk-num">06</div><h3>Community</h3><p>Local wins, civic power, wellness, food, travel, family, and stories affecting Black life.</p></article>
         </div>
       </div>
     </section>
