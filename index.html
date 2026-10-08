@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Black on Trend — The Black angle on what’s happening now</title>
+  <meta name="description" content="Black on Trend is Black cultural intelligence for the timeline — culture, money, politics, tech, sports, and community." />
+  <meta property="og:title" content="Black on Trend" />
+  <meta property="og:description" content="The Black angle on what’s happening now. Culture, money, politics, tech, sports, and community." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/profile-avatar.png" />
+  <meta name="theme-color" content="#7838ff" />
+  <link rel="icon" href="assets/profile-avatar.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --violet:#7838ff;
+      --violet-dark:#5b22de;
+      --ink:#0d0d12;
+      --cream:#f4f0e8;
+      --paper:#fffaf1;
+      --muted:#6d6875;
+      --line:rgba(13,13,18,.14);
+      --white:#fffaf1;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"DM Sans",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink);}
+    a{color:inherit;text-decoration:none}
+    .page{min-height:100vh;overflow:hidden;background:
+      radial-gradient(circle at 80% -10%, rgba(120,56,255,.22), transparent 38rem),
+      linear-gradient(180deg,var(--paper) 0%, var(--cream) 100%);}
+    .nav{width:min(1180px,calc(100% - 40px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:26px 0;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:-.04em;text-transform:uppercase}
+    .brand img{width:132px;height:auto;display:block}
+    .nav-actions{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+    .ghost{border:1px solid var(--line);padding:12px 15px;border-radius:999px;background:rgba(255,250,241,.55);backdrop-filter:blur(14px)}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);padding:14px 18px;border-radius:999px;font-weight:900;letter-spacing:.01em;box-shadow:0 10px 24px rgba(13,13,18,.16);transition:.2s ease transform,.2s ease box-shadow}
+    .button:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(13,13,18,.20)}
+    .button.secondary{background:var(--violet);border-color:var(--violet);color:white}
+    .hero{width:min(1180px,calc(100% - 40px));margin:0 auto;padding:58px 0 76px;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);border-radius:10px;padding:11px 14px;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:24px}
+    .dot{width:8px;height:8px;background:var(--violet);border-radius:50%;box-shadow:0 0 0 5px rgba(120,56,255,.18)}
+    h1{font-size:clamp(52px,8vw,112px);line-height:.89;letter-spacing:-.085em;margin:0 0 26px;font-weight:900;text-wrap:balance}
+    .lead{font-size:clamp(20px,2.5vw,31px);line-height:1.14;letter-spacing:-.045em;font-weight:700;max-width:720px;margin:0 0 28px}
+    .support{font-size:18px;line-height:1.6;color:var(--muted);max-width:640px;margin:0 0 32px;font-weight:500}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:28px}
+    .proof{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    .proof span{border:1px solid var(--line);border-radius:999px;padding:9px 11px;background:rgba(255,250,241,.6)}
+    .visual{position:relative;min-height:640px;display:grid;place-items:center}
+    .phone{width:min(390px,100%);aspect-ratio:9/16;background:var(--violet);border-radius:42px;padding:20px;box-shadow:0 34px 80px rgba(63,24,143,.32), inset 0 0 0 1px rgba(255,255,255,.22);position:relative;overflow:hidden;transform:rotate(1.5deg)}
+    .phone:before{content:"";position:absolute;inset:-20% -20% auto auto;width:220px;height:220px;background:rgba(255,255,255,.13);border-radius:50%;filter:blur(10px)}
+    .screen{height:100%;border-radius:30px;background:var(--violet);color:var(--paper);padding:36px 26px;display:flex;flex-direction:column;justify-content:space-between;position:relative;border:1px solid rgba(255,255,255,.20)}
+    .tag{align-self:flex-start;background:var(--ink);border-radius:10px;padding:11px 14px;font-weight:900;font-size:13px;letter-spacing:.05em;text-transform:uppercase}
+    .screen img{position:absolute;right:28px;top:34px;width:104px;height:auto;filter:brightness(0) invert(1)}
+    .screen-title{font-size:56px;line-height:.92;letter-spacing:-.07em;font-weight:900;margin-top:170px;text-transform:uppercase}
+    .screen-sub{font-size:19px;line-height:1.35;font-weight:700;margin-top:18px;max-width:300px}
+    .swipe{font-size:13px;letter-spacing:.22em;font-weight:900;text-transform:uppercase;border-top:1px solid rgba(255,250,241,.65);padding-top:18px;display:flex;justify-content:space-between;align-items:center}
+    .float-card{position:absolute;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 24px 50px rgba(13,13,18,.13);font-weight:800;letter-spacing:-.02em}
+    .float-card.one{left:0;bottom:110px;max-width:220px}
+    .float-card.two{right:10px;top:110px;max-width:210px;background:var(--ink);color:var(--paper)}
+    .sections{background:var(--ink);color:var(--paper);padding:82px 0 90px}
+    .inner{width:min(1180px,calc(100% - 40px));margin:0 auto}
+    .section-head{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:32px}
+    h2{font-size:clamp(38px,5vw,72px);line-height:.95;letter-spacing:-.07em;margin:0;font-weight:900;text-wrap:balance}
+    .section-copy{max-width:430px;color:rgba(255,250,241,.68);line-height:1.55;font-size:17px;margin:0;font-weight:500}
+    .desk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .desk{border:1px solid rgba(255,250,241,.16);border-radius:28px;padding:24px;min-height:190px;background:linear-gradient(180deg,rgba(255,250,241,.08),rgba(255,250,241,.035));position:relative;overflow:hidden}
+    .desk:after{content:"";position:absolute;right:-38px;bottom:-52px;width:130px;height:130px;background:rgba(120,56,255,.36);border-radius:50%;filter:blur(10px)}
+    .desk-num{font-size:13px;color:rgba(255,250,241,.48);font-weight:900;letter-spacing:.12em;margin-bottom:32px}
+    .desk h3{font-size:28px;letter-spacing:-.055em;margin:0 0 10px;font-weight:900}
+    .desk p{margin:0;color:rgba(255,250,241,.66);line-height:1.45;font-weight:500}
+    .signal{padding:86px 0;background:var(--cream)}
+    .split{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:start}
+    .rule-list{display:grid;gap:14px}
+    .rule{display:grid;grid-template-columns:42px 1fr;gap:14px;border-top:1px solid var(--line);padding-top:18px}
+    .rule b{font-size:15px;letter-spacing:.04em;text-transform:uppercase}
+    .rule p{margin:3px 0 0;color:var(--muted);line-height:1.45;font-weight:500}
+    .num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--violet);color:#fff;font-weight:900}
+    .waitlist{border-radius:34px;background:var(--violet);color:#fff;padding:34px;box-shadow:0 24px 64px rgba(120,56,255,.25)}
+    .waitlist h2{font-size:clamp(36px,4vw,62px)}
+    .waitlist p{font-size:18px;line-height:1.52;color:rgba(255,255,255,.78);font-weight:500;max-width:560px}
+    .form{display:flex;gap:10px;margin-top:24px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);padding:8px;border-radius:999px}
+    .form input{flex:1;min-width:0;border:0;background:transparent;color:#fff;font:inherit;font-weight:700;padding:0 14px;outline:none}
+    .form input::placeholder{color:rgba(255,255,255,.6)}
+    .form button{border:0;background:#fff;color:var(--ink);border-radius:999px;padding:13px 17px;font-weight:900;font-family:inherit;cursor:pointer}
+    .note{font-size:12px!important;color:rgba(255,255,255,.58)!important;margin-top:12px!important}
+    .footer{background:var(--ink);color:var(--paper);padding:32px 0}
+    .footer-row{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,250,241,.62)}
+    .footer a{color:var(--paper)}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;padding-top:34px;gap:38px}.visual{min-height:560px}.float-card{display:none}.desk-grid{grid-template-columns:1fr}.section-head,.split{display:block}.section-copy{margin-top:18px}.waitlist{margin-top:42px}.nav-actions .ghost{display:none}.brand img{width:118px}h1{font-size:58px}.lead{font-size:22px}.form{display:grid;border-radius:24px}.form input{min-height:48px}.form button{min-height:48px}.phone{width:min(340px,100%)}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Black on Trend home"><img src="assets/wordmark-black.png" alt="Black on Trend"></a>
+      <div class="nav-actions">
+        <a class="ghost" href="#weekly">Weekly Signal</a>
+        <a class="button" href="https://www.instagram.com/blackontrendofficial/" target="_blank" rel="noopener">Follow on Instagram</a>
+      </div>
+    </nav>
+
+    <section id="top" class="hero">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> The Black angle on what’s happening now</div>
+        <h1>Black cultural intelligence for the timeline.</h1>
+        <p class="lead">Culture, money, politics, tech, sports, and community — with context, not chaos.</p>
+        <p class="support">Black on Trend tracks the stories, shifts, people, policies, ideas, and moments shaping Black culture now and next.</p>
+        <div class="cta-row">
+          <a class="button secondary" href="https://www.instagram.com/blackontrendofficial/" target="_blank" rel="noopener">Follow @blackontrendofficial</a>
+          <a class="button" href="#weekly">Join the Weekly Signal</a>
+        </div>
+        <div class="proof" aria-label="Brand standards">
+          <span>Not gossip</span><span>Not outrage bait</span><span>Not viral noise</span>
+        </div>
+      </div>
+      <div class="visual" aria-hidden="true">
+        <div class="float-card one">What’s happening. What’s moving. What’s next.</div>
+        <div class="float-card two">Signal over noise.</div>
+        <div class="phone">
+          <div class="screen">
+            <div><div class="tag">Start here</div><img src="assets/wordmark-white.png" alt=""></div>
+            <div>
+              <div class="screen-title">Welcome<br>to Black<br>on Trend</div>
+              <div class="screen-sub">The Black angle on what’s happening, what’s moving, and what’s next.</div>
+            </div>
+            <div class="swipe"><span>Follow to stay ahead</span><span>→</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sections" aria-labelledby="cover-title">
+      <div class="inner">
+        <div class="section-head">
+          <h2 id="cover-title">What we cover.</h2>
+          <p class="section-copy">BOT follows the Black angle across six desks — not to chase every headline, but to find the signal worth knowing.</p>
+        </div>
+        <div class="desk-grid">
+          <article class="desk"><div class="desk-num">01</div><h3>Culture</h3><p>Music, film, creators, art, internet culture, and the moments shaping the conversation.</p></article>
+          <article class="desk"><div class="desk-num">02</div><h3>Money</h3><p>Black business, careers, ownership, deals, policy, and economic power.</p></article>
+          <article class="desk"><div class="desk-num">03</div><h3>Politics</h3><p>Power, policy, courts, voting, schools, housing, rights, and everyday impact.</p></article>
+          <article class="desk"><div class="desk-num">04</div><h3>Future</h3><p>AI, tech, innovation, digital culture, and what Black audiences should watch next.</p></article>
+          <article class="desk"><div class="desk-num">05</div><h3>Sports</h3><p>Athletes, HBCUs, sports business, ownership, culture, and the game beyond the game.</p></article>
+          <article class="desk"><div class="desk-num">06</div><h3>Community</h3><p>Local wins, civic power, wellness, food, travel, family, and stories affecting Black life.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="signal" aria-labelledby="signal-title">
+      <div class="inner split">
+        <div>
+          <h2 id="signal-title">Signal over noise.</h2>
+          <p class="support">Hot topics are allowed. Controversy is allowed. Gossip for gossip’s sake is not. If BOT covers it, there has to be context, consequence, culture, power, money, opportunity, or community impact.</p>
+          <div class="rule-list">
+            <div class="rule"><div class="num">1</div><div><b>The Black angle</b><p>Who it affects, why it matters, what’s changing, and what to watch next.</p></div></div>
+            <div class="rule"><div class="num">2</div><div><b>Useful context</b><p>Posts should make people feel informed, early, prepared, proud, or curious.</p></div></div>
+            <div class="rule"><div class="num">3</div><div><b>Trust first</b><p>Credible sources, clear credit, real context, and no naked reposts.</p></div></div>
+          </div>
+        </div>
+        <div id="weekly" class="waitlist">
+          <h2>Get the Weekly Signal.</h2>
+          <p>A short future drop from Black on Trend: what’s happening, what’s moving, and what’s next. For now, Instagram is the main channel — the list opens next.</p>
+          <form class="form" onsubmit="event.preventDefault(); document.querySelector('#thanks').textContent='Soon. For now, follow @blackontrendofficial — that is where BOT is live daily.';">
+            <input aria-label="Email address" type="email" placeholder="Email address" />
+            <button type="submit">Notify me</button>
+          </form>
+          <p id="thanks" class="note">Email capture integration is next. This first site is built to make BOT real and send people back to Instagram.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="inner footer-row">
+        <span>Black on Trend</span>
+        <span>The Black angle on what’s happening now.</span>
+        <a href="https://www.instagram.com/blackontrendofficial/" target="_blank" rel="noopener">@blackontrendofficial</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
