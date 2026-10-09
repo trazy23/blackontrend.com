@@ -43,11 +43,13 @@
     .button.violet{background:var(--violet);border-color:var(--violet);color:white}
     .button.light{background:var(--paper);color:var(--ink);border-color:rgba(255,250,241,.78)}
 
-    .hero{position:relative;background:
-      radial-gradient(circle at 72% 16%,rgba(120,56,255,.38),transparent 28rem),
-      linear-gradient(135deg,#111018 0%,#0b0b10 58%,#241052 100%);color:var(--paper)}
-    .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,250,241,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,250,241,.045) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(180deg,rgba(0,0,0,.8),transparent 85%)}
-    .hero-inner{position:relative;width:min(1180px,calc(100% - 40px));margin:0 auto;padding:76px 0 80px;display:grid;grid-template-columns:1.03fr .97fr;gap:52px;align-items:center}
+    .hero{position:relative;background:#0b0b10;color:var(--paper);overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0;background:url("assets/hero-signal-collage.svg") center/cover no-repeat;opacity:.78;transform:scale(1.02)}
+    .hero:after{content:"";position:absolute;inset:0;background:
+      linear-gradient(90deg,rgba(5,5,9,.96) 0%,rgba(5,5,9,.82) 36%,rgba(5,5,9,.30) 68%,rgba(5,5,9,.70) 100%),
+      radial-gradient(circle at 70% 18%,rgba(120,56,255,.42),transparent 26rem),
+      linear-gradient(180deg,rgba(5,5,9,.20),rgba(5,5,9,.76));}
+    .hero-inner{position:relative;z-index:2;width:min(1180px,calc(100% - 40px));margin:0 auto;padding:76px 0 80px;display:grid;grid-template-columns:1.03fr .97fr;gap:52px;align-items:center}
     .kicker{display:inline-flex;align-items:center;gap:10px;background:var(--violet);color:#fff;border-radius:12px;padding:11px 14px;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:26px}
     .kicker .dot{width:8px;height:8px;background:#fff;border-radius:50%;box-shadow:0 0 0 5px rgba(255,255,255,.16)}
     h1{font-size:clamp(58px,8.2vw,116px);line-height:.88;letter-spacing:-.09em;margin:0 0 26px;font-weight:900;text-wrap:balance;max-width:820px}
@@ -71,7 +73,7 @@
     .signal-card small{display:block;margin-top:12px;color:rgba(255,250,241,.62);font-weight:700;line-height:1.35}
     .card-a{left:0;top:64px;transform:rotate(-4deg)}
     .card-b{right:6px;bottom:76px;transform:rotate(4deg);background:rgba(120,56,255,.92)}
-    .ticker{position:absolute;left:0;right:0;bottom:0;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);background:rgba(255,250,241,.055);overflow:hidden;white-space:nowrap}
+    .ticker{position:absolute;z-index:2;left:0;right:0;bottom:0;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);background:rgba(255,250,241,.055);overflow:hidden;white-space:nowrap}
     .ticker-track{display:inline-flex;gap:28px;padding:13px 0;animation:scroll 28s linear infinite;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,250,241,.74)}
     .ticker-track span:after{content:"•";margin-left:28px;color:var(--violet-2)}
     @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -143,18 +145,18 @@
       <div class="hero-inner">
         <div>
           <div class="kicker"><span class="dot"></span> The Black angle on what’s happening now</div>
-          <h1>Black cultural intelligence for the timeline.</h1>
-          <p class="lead">Culture, money, politics, tech, sports, and community — with context, not chaos.</p>
-          <p class="support">Black on Trend tracks the stories, shifts, people, policies, ideas, and moments shaping Black culture now and next.</p>
+          <h1>Know the Black angle before it’s obvious.</h1>
+          <p class="lead">Culture, money, politics, tech, sports, and community — filtered for what actually matters.</p>
+          <p class="support">Black on Trend follows the people, policies, products, power moves, and cultural signals shaping what comes next.</p>
           <div class="cta-row">
             <a class="button violet" href="https://www.instagram.com/blackontrendofficial/" target="_blank" rel="noopener">Follow @blackontrendofficial</a>
             <a class="button light" href="#weekly">Join the Weekly Signal</a>
           </div>
-          <div class="proof" aria-label="Brand standards"><span>Not gossip</span><span>Not outrage bait</span><span>Not viral noise</span></div>
+          <div class="proof" aria-label="Brand standards"><span>Signal first</span><span>Context always</span><span>No gossip-page energy</span></div>
         </div>
         <div class="hero-art" aria-hidden="true">
-          <div class="signal-card card-a"><b>Policy to pocket</b><p>What this means for us.</p><small>Voting. Housing. Business. Schools. Money.</small></div>
-          <div class="signal-card card-b"><b>Before it blows up</b><p>Stories worth watching early.</p><small>The signal before it becomes obvious.</small></div>
+          <div class="signal-card card-a"><b>Policy to pocket</b><p>What changes in real life.</p><small>Voting. Housing. Business. Schools. Money.</small></div>
+          <div class="signal-card card-b"><b>Before it blows up</b><p>The signal before the headline.</p><small>Early moves from culture, power, and community.</small></div>
           <div class="phone">
             <div class="phone-screen">
               <div><span class="tag">Start here</span><img class="phone-logo" src="assets/wordmark-white.png" alt=""></div>
@@ -170,21 +172,21 @@
     <section id="formats" class="showcase" aria-labelledby="formats-title">
       <div class="inner">
         <div class="section-head">
-          <h2 id="formats-title">Built like a media brand, not a link page.</h2>
-          <p class="section-copy">The site now matches BOT’s actual product: sharp recurring formats, clean visual identity, and a clear reason to follow.</p>
+          <h2 id="formats-title">Recurring formats. Real point of view.</h2>
+          <p class="section-copy">BOT is built around recognizable series people can come back to — not random posts chasing the algorithm.</p>
         </div>
         <div class="format-grid">
           <article class="feature-card">
             <span class="feature-label">The Black Angle</span>
             <img src="assets/wordmark-white.png" alt="">
             <h3>Signal<br>over<br>noise.</h3>
-            <p>Hot topics can move fast. BOT’s job is to explain what matters, who it affects, and what to watch next.</p>
+            <p>When a story moves fast, BOT slows down the right part: who it affects, why it matters, and what to watch next.</p>
           </article>
           <div class="format-list">
-            <article class="format"><div class="format-num">01</div><div><h3>The Black Angle</h3><p>The part of the story people may miss — power, money, culture, consequence, and community impact.</p></div></article>
-            <article class="format"><div class="format-num">02</div><div><h3>Before It Blows Up</h3><p>Early signals from Black culture, Black Twitter, creators, founders, campuses, and communities.</p></div></article>
-            <article class="format"><div class="format-num">03</div><div><h3>Policy to Pocket</h3><p>Politics translated into everyday effects: jobs, housing, education, business, rights, and local power.</p></div></article>
-            <article class="format"><div class="format-num">04</div><div><h3>BOT Finds</h3><p>Black-owned businesses, useful products, city spots, experiences, and people worth knowing.</p></div></article>
+            <article class="format"><div class="format-num">01</div><div><h3>The Black Angle</h3><p>The part of the story most feeds miss: power, money, culture, consequence, and community impact.</p></div></article>
+            <article class="format"><div class="format-num">02</div><div><h3>Before It Blows Up</h3><p>Early signals from Black Twitter, creators, founders, campuses, city halls, and culture-makers.</p></div></article>
+            <article class="format"><div class="format-num">03</div><div><h3>Policy to Pocket</h3><p>Politics translated into practical impact: jobs, housing, education, business, rights, and local power.</p></div></article>
+            <article class="format"><div class="format-num">04</div><div><h3>BOT Finds</h3><p>Black-owned businesses, useful products, city spots, experiences, and people worth putting on your radar.</p></div></article>
           </div>
         </div>
       </div>
@@ -194,7 +196,7 @@
       <div class="inner">
         <div class="section-head">
           <h2 id="cover-title">What we cover.</h2>
-          <p class="section-copy">Six desks. One lens. BOT is not chasing every headline — just the Black angle worth knowing.</p>
+          <p class="section-copy">Six desks. One lens. BOT does not chase every headline — only the Black angle worth knowing.</p>
         </div>
         <div class="desk-grid">
           <article class="desk"><div class="desk-num">01 / CULTURE</div><h3>Culture</h3><p>Music, film, creators, art, internet culture, and the moments shaping the conversation.</p></article>
@@ -211,7 +213,7 @@
       <div class="inner why-grid">
         <div>
           <h2 id="why-title">Why follow?</h2>
-          <p class="section-copy">Because culture moves fast, and not every trending story is worth your time. BOT is built to make the important signal easier to see.</p>
+          <p class="section-copy">Because culture moves fast, and most feeds reward noise. BOT is built to make the useful signal easier to see.</p>
         </div>
         <div class="rules">
           <div class="rule"><div class="rule-num">1</div><div><b>Get the context</b><p>Who it affects, why it matters, what’s changing, and what to watch next.</p></div></div>
@@ -225,7 +227,7 @@
       <div class="inner waitlist-grid">
         <div>
           <h2 id="weekly-title">The Weekly Signal is coming.</h2>
-          <p>A short future drop from Black on Trend: what’s happening, what’s moving, and what’s next. Instagram is live now. The owned list comes next.</p>
+          <p>A short Black on Trend drop: the stories, shifts, people, and power moves worth carrying into the week. Instagram is live now. The owned list comes next.</p>
           <div class="cta-row"><a class="button light" href="https://www.instagram.com/blackontrendofficial/" target="_blank" rel="noopener">Follow on Instagram</a></div>
         </div>
         <div class="form-card">
@@ -233,7 +235,7 @@
             <input aria-label="Email address" type="email" placeholder="Email address" />
             <button type="submit">Notify me</button>
           </form>
-          <p id="thanks" class="note">Email capture integration is next. This first site is built to make BOT real and send people back to Instagram.</p>
+          <p id="thanks" class="note">Early access list. Until email is connected, follow @blackontrendofficial for the daily signal.</p>
         </div>
       </div>
     </section>
