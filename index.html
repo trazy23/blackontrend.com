@@ -58,23 +58,23 @@
     .proof{display:flex;flex-wrap:wrap;gap:10px;color:rgba(255,250,241,.74);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
     .proof span{border:1px solid var(--line-dark);border-radius:999px;padding:9px 11px;background:rgba(255,250,241,.055)}
 
-    .hero-panel{position:relative;border:1px solid rgba(255,250,241,.18);border-radius:34px;background:linear-gradient(180deg,rgba(255,250,241,.10),rgba(255,250,241,.04));box-shadow:0 42px 120px rgba(0,0,0,.42);overflow:hidden;padding:24px;min-height:620px;display:flex;flex-direction:column;gap:18px}
+    .hero-panel{position:relative;border:1px solid rgba(255,250,241,.18);border-radius:34px;background:linear-gradient(180deg,rgba(255,250,241,.10),rgba(255,250,241,.04));box-shadow:0 42px 120px rgba(0,0,0,.42);overflow:hidden;padding:22px;min-height:620px;display:grid;grid-template-rows:auto 1fr auto;gap:18px}
     .hero-panel:before{content:"";position:absolute;inset:-1px;background:radial-gradient(circle at 80% 0%,rgba(120,56,255,.36),transparent 22rem);pointer-events:none}
     .panel-top{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:16px}.panel-top img{width:112px}
     .tag{display:inline-flex;align-items:center;align-self:flex-start;background:var(--violet);border-radius:10px;padding:10px 13px;font-weight:900;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:#fff}
-    .today-card{position:relative;z-index:2;background:var(--paper);color:var(--ink);border-radius:28px;padding:24px;box-shadow:0 22px 58px rgba(0,0,0,.28)}
-    .today-card.dark{background:#111018;color:var(--paper);border:1px solid rgba(255,250,241,.14)}
-    .today-label{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
-    .today-card.dark .today-label{color:rgba(255,250,241,.62)}
-    .today-card h2,.today-card h3{margin:0;font-weight:900;letter-spacing:-.055em;line-height:.96}.today-card h2{font-size:clamp(38px,4.1vw,56px);text-transform:uppercase}.today-card h3{font-size:32px;line-height:1.02}.today-card p{margin:12px 0 0;color:var(--muted);font-weight:650;line-height:1.42}.today-card.dark p{color:rgba(255,250,241,.70)}
-    .signal-mini{position:relative;z-index:2;display:grid;gap:10px}.mini-card{border:1px solid rgba(255,250,241,.13);border-radius:20px;padding:16px;background:rgba(255,250,241,.07)}.mini-card b{display:block;color:var(--paper);font-size:15px;line-height:1.16;letter-spacing:-.025em}.mini-card span{display:block;margin-bottom:8px;color:#a77bff;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+    .hero-story-stack{position:relative;z-index:2;min-height:420px}
+    .hero-story{position:absolute;border-radius:28px;overflow:hidden;border:1px solid rgba(255,250,241,.18);box-shadow:0 26px 70px rgba(0,0,0,.38);background:#111018}
+    .hero-story img{width:100%;height:100%;object-fit:cover}.hero-story:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,15,0) 42%,rgba(10,10,15,.86) 100%)}
+    .hero-story.main{left:0;top:0;width:74%;height:100%;z-index:3}.hero-story.secondary{right:0;top:36px;width:47%;height:58%;z-index:2}.hero-story.tertiary{right:34px;bottom:18px;width:42%;height:38%;z-index:4}
+    .story-caption{position:absolute;left:18px;right:18px;bottom:18px;z-index:5}.story-caption span{display:inline-flex;background:var(--violet);color:#fff;border-radius:9px;padding:8px 10px;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.09em;margin-bottom:10px}.story-caption b{display:block;color:#fff;font-size:22px;line-height:1.0;letter-spacing:-.045em}
+    .hero-note{position:relative;z-index:2;background:rgba(255,250,241,.075);border:1px solid rgba(255,250,241,.13);border-radius:22px;padding:18px;color:rgba(255,250,241,.76);font-weight:700;line-height:1.42}.hero-note b{color:#fff}
     .ticker{position:absolute;z-index:2;left:0;right:0;bottom:0;border-top:1px solid var(--line-dark);background:rgba(255,250,241,.055);overflow:hidden;white-space:nowrap}
     .ticker-track{display:inline-flex;gap:28px;padding:13px 0;animation:scroll 28s linear infinite;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,250,241,.74)}
     .ticker-track span:after{content:"•";margin-left:28px;color:#9c6bff}@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
     .section{padding:92px 0}.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,470px);gap:40px;align-items:end;margin-bottom:38px}
     h2{font-size:clamp(40px,5vw,70px);line-height:1.0;letter-spacing:-.062em;margin:0;font-weight:900;text-wrap:balance}.section-copy{max-width:520px;color:var(--muted);line-height:1.55;font-size:17px;margin:0;font-weight:650}
-    .signal-section{background:var(--paper)}.signal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.signal-card{border:1px solid var(--line);border-radius:30px;background:var(--cream);padding:24px;min-height:270px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 18px 48px rgba(10,10,15,.055)}.signal-card.featured{background:var(--ink);color:var(--paper);border-color:var(--ink)}.signal-meta{display:flex;justify-content:space-between;gap:14px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:34px}.signal-card.featured .signal-meta{color:rgba(255,250,241,.56)}.signal-card h3{font-size:clamp(28px,3vw,40px);line-height:1.0;letter-spacing:-.055em;margin:0 0 14px;font-weight:900}.signal-card p{margin:0;color:var(--muted);font-weight:650;line-height:1.45}.signal-card.featured p{color:rgba(255,250,241,.70)}
+    .signal-section{background:var(--paper)}.signal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.signal-card{border:1px solid var(--line);border-radius:30px;background:var(--cream);overflow:hidden;min-height:520px;display:flex;flex-direction:column;box-shadow:0 18px 48px rgba(10,10,15,.055)}.signal-card.featured{background:var(--ink);color:var(--paper);border-color:var(--ink)}.signal-image{position:relative;height:310px;background:#111018;overflow:hidden}.signal-image img{width:100%;height:100%;object-fit:cover}.signal-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,15,0) 42%,rgba(10,10,15,.72) 100%)}.signal-badge{position:absolute;left:18px;top:18px;z-index:2;background:var(--violet);color:#fff;border-radius:10px;padding:9px 11px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.09em}.signal-body{padding:23px;display:flex;flex-direction:column;flex:1}.signal-meta{display:flex;justify-content:space-between;gap:14px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:18px}.signal-card.featured .signal-meta{color:rgba(255,250,241,.56)}.signal-card h3{font-size:clamp(25px,2.4vw,34px);line-height:1.0;letter-spacing:-.055em;margin:0 0 14px;font-weight:900}.signal-card p{margin:0;color:var(--muted);font-weight:650;line-height:1.45}.signal-card.featured p{color:rgba(255,250,241,.70)}.signal-link{margin-top:auto;padding-top:18px;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--violet)}.signal-card.featured .signal-link{color:#b99cff}
 
     .format-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:18px;align-items:stretch}.feature-card{min-height:540px;border-radius:34px;background:var(--violet);color:var(--paper);padding:34px;position:relative;overflow:hidden;box-shadow:0 30px 70px rgba(120,56,255,.24)}.feature-card:before{content:"";position:absolute;right:-140px;top:-140px;width:380px;height:380px;border-radius:50%;background:rgba(255,255,255,.13)}.feature-label{display:inline-flex;background:var(--ink);border-radius:10px;padding:11px 14px;font-size:12px;font-weight:900;letter-spacing:.09em;text-transform:uppercase}.feature-card h3{position:absolute;left:34px;right:34px;bottom:126px;margin:0;font-size:clamp(48px,5.6vw,82px);line-height:.94;letter-spacing:-.07em;text-transform:uppercase}.feature-card p{position:absolute;left:34px;right:34px;bottom:34px;margin:0;font-size:19px;line-height:1.38;font-weight:700;color:rgba(255,250,241,.86);max-width:560px}.format-list{display:grid;gap:14px}.format{border:1px solid var(--line);background:var(--paper);border-radius:28px;padding:24px;display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;min-height:124px;box-shadow:0 18px 48px rgba(10,10,15,.055)}.format-num{font-size:40px;line-height:1;font-weight:900;letter-spacing:-.06em;color:var(--violet)}.format h3{margin:0 0 8px;font-size:26px;line-height:1.03;letter-spacing:-.045em}.format p{margin:0;color:var(--muted);font-weight:620;line-height:1.45}
 
@@ -114,22 +114,21 @@
           </div>
           <div class="proof" aria-label="Brand standards"><span>Signal first</span><span>Context always</span><span>Culture with consequence</span></div>
         </div>
-        <aside class="hero-panel" aria-label="Black on Trend editorial preview">
-          <div class="panel-top"><span class="tag">Today’s signal</span><img src="assets/wordmark-white.png" alt="Black on Trend"></div>
-          <article class="today-card">
-            <div class="today-label"><span>What’s happening</span><span>Community</span></div>
-            <h2>HBCU voter power</h2>
-            <p>Young Black voters are not a side story. Campuses are becoming civic engines before the midterms heat up.</p>
-          </article>
-          <div class="signal-mini">
-            <article class="mini-card"><span>What’s moving</span><b>Black-owned businesses are watching procurement, policy, and funding shifts.</b></article>
-            <article class="mini-card"><span>What’s next</span><b>AI, creators, and culture are reshaping who gets seen — and who gets paid.</b></article>
+        <aside class="hero-panel" aria-label="Black on Trend latest editorial visuals">
+          <div class="panel-top"><span class="tag">Latest on BOT</span><img src="assets/wordmark-white.png" alt="Black on Trend"></div>
+          <div class="hero-story-stack">
+            <a class="hero-story main" href="https://www.instagram.com/p/17920089081449659/" target="_blank" rel="noopener" aria-label="Sidney Poitier festival story on Instagram">
+              <img src="assets/latest/poitier-festival.jpg" alt="Sidney Poitier editorial cover">
+              <span class="story-caption"><span>Culture</span><b>Black film. Local economy. Legacy.</b></span>
+            </a>
+            <a class="hero-story secondary" href="https://www.instagram.com/p/DeMbqt5kS3f/" target="_blank" rel="noopener" aria-label="WNBA playoff story on Instagram">
+              <img src="assets/latest/wnba-playoffs.jpg" alt="WNBA playoff editorial cover">
+            </a>
+            <a class="hero-story tertiary" href="https://www.instagram.com/p/DeJ_QeMjiX9/" target="_blank" rel="noopener" aria-label="Timnit Gebru AI power story on Instagram">
+              <img src="assets/latest/timnit-gebru-ai.jpg" alt="Timnit Gebru editorial cover">
+            </a>
           </div>
-          <article class="today-card dark">
-            <div class="today-label"><span>The Black Angle</span><span>Daily</span></div>
-            <h3>Who it affects. Why it matters. What moves next.</h3>
-            <p>BOT turns fast-moving stories into context people can use, share, and remember.</p>
-          </article>
+          <div class="hero-note"><b>Live from the feed.</b> Real BOT stories, real visual direction, and one clear path back to the Instagram account.</div>
         </aside>
       </div>
       <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Culture</span><span>Money</span><span>Politics</span><span>Future</span><span>Sports</span><span>Community</span><span>The Black Angle</span><span>Signal Over Noise</span><span>Culture</span><span>Money</span><span>Politics</span><span>Future</span><span>Sports</span><span>Community</span><span>The Black Angle</span><span>Signal Over Noise</span></div></div>
@@ -138,31 +137,37 @@
     <section id="signal" class="section signal-section" aria-labelledby="signal-title">
       <div class="inner">
         <div class="section-head">
-          <h2 id="signal-title">Today’s Signal.</h2>
-          <p class="section-copy">A preview of the editorial product: fast-moving stories with the Black angle already pulled forward.</p>
+          <h2 id="signal-title">Latest from BOT.</h2>
+          <p class="section-copy">Approved BOT stories from the Instagram feed, with the same visuals and a clear path to follow the account.</p>
         </div>
         <div class="signal-grid">
-          <article class="signal-card featured">
-            <div>
-              <div class="signal-meta"><span>What’s happening</span><span>Community</span></div>
-              <h3>HBCU students are organizing before the national spotlight arrives.</h3>
-              <p>The angle is not just turnout. It is campus power, local policy, and who gets heard early.</p>
+          <a class="signal-card featured" href="https://www.instagram.com/p/17920089081449659/" target="_blank" rel="noopener">
+            <div class="signal-image"><img src="assets/latest/poitier-festival.jpg" alt="Sidney Poitier festival cover"><span class="signal-badge">Culture</span></div>
+            <div class="signal-body">
+              <div class="signal-meta"><span>Published</span><span>Culture</span></div>
+              <h3>Black film as culture, memory, and local economy.</h3>
+              <p>BOT framed Sidney Poitier’s centennial through legacy, festival power, and why Black film institutions still matter.</p>
+              <span class="signal-link">View on Instagram →</span>
             </div>
-          </article>
-          <article class="signal-card">
-            <div>
-              <div class="signal-meta"><span>What’s moving</span><span>Money</span></div>
-              <h3>Black-owned businesses are watching the next funding fight.</h3>
-              <p>Procurement, grants, bank access, and supplier programs matter before they become headline politics.</p>
+          </a>
+          <a class="signal-card" href="https://www.instagram.com/p/DeMbqt5kS3f/" target="_blank" rel="noopener">
+            <div class="signal-image"><img src="assets/latest/wnba-playoffs.jpg" alt="WNBA playoff cover"><span class="signal-badge">Sports</span></div>
+            <div class="signal-body">
+              <div class="signal-meta"><span>Published</span><span>Sports</span></div>
+              <h3>Black women stars stay at the center of playoff attention.</h3>
+              <p>The sports story is also a culture story: visibility, leadership, and who carries the moment.</p>
+              <span class="signal-link">View on Instagram →</span>
             </div>
-          </article>
-          <article class="signal-card">
-            <div>
-              <div class="signal-meta"><span>What’s next</span><span>Future</span></div>
-              <h3>AI is becoming a culture story, not just a tech story.</h3>
-              <p>Creators, students, workers, and founders are already deciding what the next internet looks like.</p>
+          </a>
+          <a class="signal-card" href="https://www.instagram.com/p/DeJ_QeMjiX9/" target="_blank" rel="noopener">
+            <div class="signal-image"><img src="assets/latest/timnit-gebru-ai.jpg" alt="Timnit Gebru AI power cover"><span class="signal-badge">Future</span></div>
+            <div class="signal-body">
+              <div class="signal-meta"><span>Published</span><span>Future</span></div>
+              <h3>AI power is a Black future story.</h3>
+              <p>Recognition for Timnit Gebru puts the focus where BOT wants it: technology, power, ethics, and who gets heard.</p>
+              <span class="signal-link">View on Instagram →</span>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
