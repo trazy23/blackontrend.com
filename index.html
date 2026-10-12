@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Black on Trend — The Black angle on what’s happening now</title>
-  <meta name="description" content="Black on Trend is Black cultural intelligence for the timeline — culture, money, politics, tech, sports, and community." />
+  <title>Black on Trend — What’s happening. What’s moving. What’s next.</title>
+  <meta name="description" content="Black on Trend tracks culture, money, politics, tech, sports, and community through the Black angle." />
   <meta property="og:title" content="Black on Trend" />
-  <meta property="og:description" content="The Black angle on what’s happening now. Culture, money, politics, tech, sports, and community." />
+  <meta property="og:description" content="What’s happening. What’s moving. What’s next in Black culture." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/profile-avatar.png" />
   <meta name="theme-color" content="#7838ff" />
@@ -17,119 +17,75 @@
   <style>
     :root{
       --violet:#7838ff;
-      --violet-2:#9c6bff;
-      --ink:#0b0b10;
-      --ink-2:#15141b;
+      --violet-deep:#5e25e8;
+      --ink:#0a0a0f;
+      --ink-soft:#17141f;
       --cream:#f4efe6;
       --paper:#fffaf1;
       --muted:#77717d;
-      --line:rgba(11,11,16,.14);
+      --line:rgba(10,10,15,.14);
       --line-dark:rgba(255,250,241,.16);
-      --white:#fffaf1;
+      --max:1180px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth;background:var(--ink)}
-    body{margin:0;font-family:"DM Sans",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink);}
+    body{margin:0;font-family:"DM Sans",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink);text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
     .page{min-height:100vh;overflow:hidden;background:var(--cream)}
-    .nav{position:sticky;top:0;z-index:20;background:rgba(244,239,230,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(11,11,16,.08)}
-    .nav-inner{width:min(1180px,calc(100% - 40px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:18px}
-    .brand img{width:124px;height:auto}
-    .nav-actions{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
-    .nav-link{padding:11px 13px;border:1px solid var(--line);border-radius:999px;background:rgba(255,250,241,.52)}
-    .button{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);padding:14px 18px;border-radius:999px;font-weight:900;letter-spacing:.01em;box-shadow:0 14px 34px rgba(11,11,16,.16);transition:.2s ease transform,.2s ease box-shadow}
-    .button:hover{transform:translateY(-2px);box-shadow:0 18px 42px rgba(11,11,16,.22)}
+    .inner{width:min(var(--max),calc(100% - 48px));margin:0 auto}
+
+    .nav{position:sticky;top:0;z-index:30;background:rgba(244,239,230,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(10,10,15,.08)}
+    .nav-inner{width:min(var(--max),calc(100% - 48px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:18px}
+    .brand{display:inline-flex;align-items:center;flex:0 0 auto}.brand img{width:128px;height:auto}
+    .nav-actions{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    .nav-link{padding:10px 13px;border:1px solid var(--line);border-radius:999px;background:rgba(255,250,241,.55)}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);padding:14px 18px;border-radius:999px;font-weight:900;letter-spacing:.01em;box-shadow:0 14px 34px rgba(10,10,15,.14);transition:.2s ease transform,.2s ease box-shadow}
+    .button:hover{transform:translateY(-2px);box-shadow:0 18px 42px rgba(10,10,15,.22)}
     .button.violet{background:var(--violet);border-color:var(--violet);color:white}
     .button.light{background:var(--paper);color:var(--ink);border-color:rgba(255,250,241,.78)}
 
-    .hero{position:relative;background:#0b0b10;color:var(--paper);overflow:hidden}
-    .hero:before{content:"";position:absolute;inset:0;background:url("assets/hero-signal-collage.svg") center/cover no-repeat;opacity:.50;transform:scale(1.02)}
-    .hero:after{content:"";position:absolute;inset:0;background:
-      linear-gradient(90deg,rgba(5,5,9,.96) 0%,rgba(5,5,9,.80) 34%,rgba(5,5,9,.18) 68%,rgba(5,5,9,.42) 100%),
-      radial-gradient(circle at 70% 18%,rgba(120,56,255,.34),transparent 26rem),
-      linear-gradient(180deg,rgba(5,5,9,.10),rgba(5,5,9,.58));}
-    .hero-inner{position:relative;z-index:2;width:min(1180px,calc(100% - 40px));margin:0 auto;padding:76px 0 80px;display:grid;grid-template-columns:1.03fr .97fr;gap:52px;align-items:center}
-    .kicker{display:inline-flex;align-items:center;gap:10px;background:var(--violet);color:#fff;border-radius:12px;padding:11px 14px;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:26px}
-    .kicker .dot{width:8px;height:8px;background:#fff;border-radius:50%;box-shadow:0 0 0 5px rgba(255,255,255,.16)}
-    h1{font-size:clamp(52px,7.2vw,96px);line-height:.96;letter-spacing:-.058em;margin:0 0 28px;font-weight:900;max-width:860px}
-    h1 .hero-line{display:block;white-space:nowrap}
-    .lead{font-size:clamp(21px,2.45vw,31px);line-height:1.14;letter-spacing:-.045em;font-weight:800;max-width:720px;margin:0 0 22px;color:rgba(255,250,241,.92)}
-    .support{font-size:18px;line-height:1.6;color:rgba(255,250,241,.68);max-width:650px;margin:0 0 32px;font-weight:550}
+    .hero{position:relative;background:var(--ink);color:var(--paper);overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 18%,rgba(120,56,255,.42),transparent 33rem),linear-gradient(135deg,rgba(120,56,255,.18),transparent 36%),#0a0a0f}
+    .hero-inner{position:relative;z-index:2;width:min(var(--max),calc(100% - 48px));margin:0 auto;padding:86px 0 96px;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(390px,.88fr);gap:62px;align-items:center}
+    .kicker{display:inline-flex;align-items:center;gap:10px;background:rgba(120,56,255,.95);color:#fff;border-radius:12px;padding:11px 14px;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.09em;margin-bottom:28px}
+    .kicker .dot{width:8px;height:8px;background:#fff;border-radius:50%;box-shadow:0 0 0 5px rgba(255,255,255,.14)}
+    h1{font-size:clamp(50px,6.4vw,86px);line-height:1.02;letter-spacing:-.055em;margin:0 0 28px;font-weight:900;max-width:780px}
+    h1 .hero-line{display:block}
+    .lead{font-size:clamp(22px,2.25vw,30px);line-height:1.18;letter-spacing:-.036em;font-weight:850;max-width:720px;margin:0 0 20px;color:rgba(255,250,241,.94)}
+    .support{font-size:18px;line-height:1.55;color:rgba(255,250,241,.70);max-width:620px;margin:0 0 32px;font-weight:600}
     .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:30px}
     .proof{display:flex;flex-wrap:wrap;gap:10px;color:rgba(255,250,241,.74);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
     .proof span{border:1px solid var(--line-dark);border-radius:999px;padding:9px 11px;background:rgba(255,250,241,.055)}
-    .hero-art{position:relative;min-height:670px;display:grid;place-items:center}
-    .hero-image-panel{position:absolute;z-index:1;inset:18px 6px 18px auto;width:min(520px,92%);height:calc(100% - 36px);border-radius:44px;overflow:hidden;box-shadow:0 42px 110px rgba(0,0,0,.42);border:1px solid rgba(255,250,241,.28);transform:rotate(-2.5deg)}
-    .hero-image-panel img{width:100%;height:100%;object-fit:cover;display:block}
-    .hero-image-panel:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,16,.08),rgba(11,11,16,.18)),linear-gradient(180deg,rgba(120,56,255,.08),rgba(11,11,16,.24))}
-    .phone{width:min(344px,80%);aspect-ratio:9/16;background:var(--violet);border-radius:38px;padding:16px;box-shadow:0 42px 96px rgba(0,0,0,.46),0 0 0 1px rgba(255,255,255,.16);position:relative;z-index:4;transform:rotate(2deg)}
-    .phone-screen{height:100%;border-radius:28px;background:var(--violet);padding:30px 24px;color:var(--paper);display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(255,255,255,.20);position:relative;overflow:hidden}
-    .phone-screen:after{content:"";position:absolute;inset:-80px auto auto 30%;width:220px;height:220px;background:rgba(255,255,255,.12);border-radius:50%;filter:blur(4px)}
-    .tag{display:inline-flex;align-items:center;align-self:flex-start;background:var(--ink);border-radius:10px;padding:10px 13px;font-weight:900;font-size:12px;letter-spacing:.06em;text-transform:uppercase;position:relative;z-index:2}
-    .phone-logo{position:absolute;right:24px;top:28px;width:90px;filter:brightness(0) invert(1);z-index:2}
-    .phone-title{font-size:46px;line-height:.94;letter-spacing:-.07em;font-weight:900;text-transform:uppercase;position:relative;z-index:2}
-    .phone-sub{font-size:17px;line-height:1.35;font-weight:700;margin-top:16px;max-width:270px;color:rgba(255,250,241,.86);position:relative;z-index:2}
-    .swipe{font-size:12px;letter-spacing:.18em;font-weight:900;text-transform:uppercase;border-top:1px solid rgba(255,250,241,.62);padding-top:16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
-    .signal-card{position:absolute;z-index:3;width:250px;border:1px solid var(--line-dark);background:rgba(255,250,241,.09);backdrop-filter:blur(18px);border-radius:26px;padding:18px;box-shadow:0 26px 60px rgba(0,0,0,.28)}
-    .signal-card b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--violet-2);margin-bottom:12px}
-    .signal-card p{margin:0;font-size:22px;line-height:1.02;letter-spacing:-.055em;font-weight:900;color:var(--paper)}
-    .signal-card small{display:block;margin-top:12px;color:rgba(255,250,241,.62);font-weight:700;line-height:1.35}
-    .card-a{left:0;top:64px;transform:rotate(-4deg)}
-    .card-b{right:6px;bottom:76px;transform:rotate(4deg);background:rgba(120,56,255,.92)}
-    .ticker{position:absolute;z-index:2;left:0;right:0;bottom:0;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);background:rgba(255,250,241,.055);overflow:hidden;white-space:nowrap}
+
+    .hero-panel{position:relative;border:1px solid rgba(255,250,241,.18);border-radius:34px;background:linear-gradient(180deg,rgba(255,250,241,.10),rgba(255,250,241,.04));box-shadow:0 42px 120px rgba(0,0,0,.42);overflow:hidden;min-height:620px}
+    .hero-panel-media{height:310px;background:#17141f;position:relative;overflow:hidden}
+    .hero-panel-media img{width:100%;height:100%;object-fit:cover;opacity:.9}
+    .hero-panel-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,15,.05),rgba(10,10,15,.84)),linear-gradient(90deg,rgba(120,56,255,.20),transparent)}
+    .hero-panel-content{position:absolute;left:0;right:0;bottom:0;padding:30px;background:linear-gradient(180deg,rgba(10,10,15,.18),rgba(10,10,15,.92) 24%,#0a0a0f)}
+    .panel-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}.panel-top img{width:112px;filter:brightness(0) invert(1)}
+    .tag{display:inline-flex;align-items:center;align-self:flex-start;background:var(--violet);border-radius:10px;padding:10px 13px;font-weight:900;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:#fff}
+    .panel-title{font-size:clamp(40px,4.4vw,58px);line-height:.96;letter-spacing:-.065em;font-weight:900;text-transform:uppercase;margin:0 0 18px;color:var(--paper)}
+    .panel-copy{font-size:17px;line-height:1.48;color:rgba(255,250,241,.70);font-weight:650;margin:0 0 24px;max-width:420px}
+    .panel-list{display:grid;gap:10px}.panel-item{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0;border-top:1px solid rgba(255,250,241,.13);font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,250,241,.76)}.panel-item b{color:#fff}.panel-item span{color:rgba(255,250,241,.52)}
+    .ticker{position:absolute;z-index:2;left:0;right:0;bottom:0;border-top:1px solid var(--line-dark);background:rgba(255,250,241,.055);overflow:hidden;white-space:nowrap}
     .ticker-track{display:inline-flex;gap:28px;padding:13px 0;animation:scroll 28s linear infinite;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,250,241,.74)}
-    .ticker-track span:after{content:"•";margin-left:28px;color:var(--violet-2)}
-    @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .ticker-track span:after{content:"•";margin-left:28px;color:#9c6bff}@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-    .showcase{background:var(--cream);padding:86px 0 78px}
-    .inner{width:min(1180px,calc(100% - 40px));margin:0 auto}
-    .section-head{display:flex;justify-content:space-between;gap:28px;align-items:flex-end;margin-bottom:34px}
-    h2{font-size:clamp(42px,5.4vw,78px);line-height:.93;letter-spacing:-.075em;margin:0;font-weight:900;text-wrap:balance}
-    .section-copy{max-width:470px;color:var(--muted);line-height:1.55;font-size:17px;margin:0;font-weight:600}
-    .format-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:16px;align-items:stretch}
-    .feature-card{min-height:560px;border-radius:36px;background:var(--violet);color:var(--paper);padding:36px;position:relative;overflow:hidden;box-shadow:0 30px 70px rgba(120,56,255,.24)}
-    .feature-card:before{content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;border-radius:50%;background:rgba(255,255,255,.12)}
-    .feature-card img{position:absolute;right:34px;top:34px;width:108px;filter:brightness(0) invert(1)}
-    .feature-label{display:inline-flex;background:var(--ink);border-radius:10px;padding:11px 14px;font-size:13px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
-    .feature-card h3{position:absolute;left:36px;right:36px;bottom:112px;margin:0;font-size:clamp(54px,6.4vw,92px);line-height:.88;letter-spacing:-.08em;text-transform:uppercase}
-    .feature-card p{position:absolute;left:36px;right:36px;bottom:36px;margin:0;font-size:20px;line-height:1.35;font-weight:700;color:rgba(255,250,241,.85);max-width:560px}
-    .format-list{display:grid;gap:16px}
-    .format{border:1px solid var(--line);background:var(--paper);border-radius:30px;padding:24px;display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:start;min-height:128px;box-shadow:0 18px 48px rgba(11,11,16,.06)}
-    .format-num{font-size:46px;line-height:1;font-weight:900;letter-spacing:-.08em;color:var(--violet)}
-    .format h3{margin:0 0 8px;font-size:28px;line-height:.98;letter-spacing:-.055em}
-    .format p{margin:0;color:var(--muted);font-weight:600;line-height:1.45}
+    .section{padding:92px 0}.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,470px);gap:40px;align-items:end;margin-bottom:38px}
+    h2{font-size:clamp(40px,5vw,70px);line-height:1.0;letter-spacing:-.062em;margin:0;font-weight:900;text-wrap:balance}.section-copy{max-width:520px;color:var(--muted);line-height:1.55;font-size:17px;margin:0;font-weight:650}
 
-    .desks{background:var(--ink);color:var(--paper);padding:86px 0}
-    .desks .section-copy{color:rgba(255,250,241,.64)}
-    .desk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .desk{border:1px solid var(--line-dark);border-radius:30px;padding:26px;min-height:238px;background:linear-gradient(180deg,rgba(255,250,241,.075),rgba(255,250,241,.032));position:relative;overflow:hidden}
-    .desk:before{content:"";position:absolute;right:-56px;bottom:-66px;width:160px;height:160px;background:rgba(120,56,255,.36);border-radius:50%;filter:blur(8px)}
-    .desk-num{font-size:13px;color:rgba(255,250,241,.44);font-weight:900;letter-spacing:.12em;margin-bottom:48px}
-    .desk h3{font-size:31px;letter-spacing:-.06em;margin:0 0 10px;font-weight:900}
-    .desk p{margin:0;color:rgba(255,250,241,.66);line-height:1.45;font-weight:600;position:relative;z-index:2}
+    .format-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:18px;align-items:stretch}.feature-card{min-height:540px;border-radius:34px;background:var(--violet);color:var(--paper);padding:34px;position:relative;overflow:hidden;box-shadow:0 30px 70px rgba(120,56,255,.24)}.feature-card:before{content:"";position:absolute;right:-140px;top:-140px;width:380px;height:380px;border-radius:50%;background:rgba(255,255,255,.13)}.feature-label{display:inline-flex;background:var(--ink);border-radius:10px;padding:11px 14px;font-size:12px;font-weight:900;letter-spacing:.09em;text-transform:uppercase}.feature-card h3{position:absolute;left:34px;right:34px;bottom:126px;margin:0;font-size:clamp(48px,5.6vw,82px);line-height:.94;letter-spacing:-.07em;text-transform:uppercase}.feature-card p{position:absolute;left:34px;right:34px;bottom:34px;margin:0;font-size:19px;line-height:1.38;font-weight:700;color:rgba(255,250,241,.86);max-width:560px}.format-list{display:grid;gap:14px}.format{border:1px solid var(--line);background:var(--paper);border-radius:28px;padding:24px;display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;min-height:124px;box-shadow:0 18px 48px rgba(10,10,15,.055)}.format-num{font-size:40px;line-height:1;font-weight:900;letter-spacing:-.06em;color:var(--violet)}.format h3{margin:0 0 8px;font-size:26px;line-height:1.03;letter-spacing:-.045em}.format p{margin:0;color:var(--muted);font-weight:620;line-height:1.45}
 
-    .why{background:var(--paper);padding:86px 0}
-    .why-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:46px;align-items:start}
-    .rules{display:grid;gap:14px}
-    .rule{display:grid;grid-template-columns:48px 1fr;gap:16px;border-top:1px solid var(--line);padding-top:20px}
-    .rule-num{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--violet);color:#fff;font-weight:900}
-    .rule b{font-size:16px;letter-spacing:.035em;text-transform:uppercase}.rule p{margin:4px 0 0;color:var(--muted);line-height:1.45;font-weight:600}
-    .manifesto{border-radius:36px;background:var(--ink);color:var(--paper);padding:34px;box-shadow:0 28px 70px rgba(11,11,16,.16)}
-    .manifesto h3{margin:0 0 20px;font-size:44px;line-height:.95;letter-spacing:-.065em}.manifesto p{margin:0;color:rgba(255,250,241,.72);font-weight:600;line-height:1.55;font-size:18px}.manifesto .proof{margin-top:28px}
+    .desks{background:var(--ink);color:var(--paper)}.desks .section-copy{color:rgba(255,250,241,.64)}.desk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.desk{border:1px solid var(--line-dark);border-radius:30px;padding:26px;min-height:238px;background:linear-gradient(180deg,rgba(255,250,241,.075),rgba(255,250,241,.032));position:relative;overflow:hidden}.desk:before{content:"";position:absolute;right:-56px;bottom:-66px;width:160px;height:160px;background:rgba(120,56,255,.36);border-radius:50%;filter:blur(8px)}.desk-num{font-size:12px;color:rgba(255,250,241,.44);font-weight:900;letter-spacing:.13em;margin-bottom:48px}.desk h3{font-size:31px;letter-spacing:-.05em;line-height:1.02;margin:0 0 10px;font-weight:900}.desk p{margin:0;color:rgba(255,250,241,.66);line-height:1.45;font-weight:620;position:relative;z-index:2}
 
-    .waitlist-section{background:var(--violet);color:#fff;padding:86px 0;position:relative;overflow:hidden}
-    .waitlist-section:before{content:"";position:absolute;inset:auto -18% -55% auto;width:620px;height:620px;border-radius:50%;background:rgba(255,255,255,.12)}
-    .waitlist-grid{position:relative;display:grid;grid-template-columns:1fr .82fr;gap:48px;align-items:center}
-    .waitlist-section h2{max-width:740px}.waitlist-section p{font-size:19px;line-height:1.5;color:rgba(255,255,255,.78);font-weight:650;max-width:720px}
-    .form-card{background:rgba(11,11,16,.20);border:1px solid rgba(255,255,255,.24);border-radius:32px;padding:26px;backdrop-filter:blur(12px)}
-    .form{display:grid;gap:10px}
-    .form input{border:1px solid rgba(255,255,255,.26);background:rgba(255,255,255,.12);color:#fff;font:inherit;font-weight:800;padding:16px;border-radius:16px;outline:none}.form input::placeholder{color:rgba(255,255,255,.62)}
-    .form button{border:0;background:#fff;color:var(--ink);border-radius:16px;padding:16px;font-weight:900;font-family:inherit;cursor:pointer}.note{font-size:12px!important;color:rgba(255,255,255,.62)!important;margin:12px 0 0!important}
-    .footer{background:var(--ink);color:var(--paper);padding:32px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,250,241,.62)}.footer a{color:var(--paper)}
+    .why{background:var(--paper)}.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:start}.rules{display:grid;gap:14px}.rule{display:grid;grid-template-columns:48px 1fr;gap:16px;border-top:1px solid var(--line);padding-top:20px}.rule-num{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--violet);color:#fff;font-weight:900}.rule b{font-size:16px;letter-spacing:.035em;text-transform:uppercase}.rule p{margin:4px 0 0;color:var(--muted);line-height:1.45;font-weight:620}
 
-    @media (max-width:900px){
-      .nav-link{display:none}.brand img{width:112px}.button{padding:13px 15px}.hero-inner{grid-template-columns:1fr;padding:50px 0 72px;gap:30px}h1{font-size:clamp(44px,12.8vw,56px);line-height:.98;letter-spacing:-.052em}.lead{font-size:22px}.support{font-size:16px}.hero-art{min-height:560px}.hero-image-panel{inset:0;width:100%;height:100%;opacity:.72;border-radius:36px}.phone{width:min(310px,88%)}.phone-title{font-size:40px}.signal-card{width:210px}.card-a{left:0;top:8px}.card-b{right:0;bottom:30px}.format-grid,.why-grid,.waitlist-grid{grid-template-columns:1fr}.feature-card{min-height:510px;padding:28px}.feature-card h3{left:28px;right:28px;bottom:112px}.feature-card p{left:28px;right:28px}.format{grid-template-columns:58px 1fr}.desk-grid{grid-template-columns:1fr}.section-head{display:block}.section-copy{margin-top:16px}.showcase,.desks,.why,.waitlist-section{padding:66px 0}.nav-actions{gap:6px}.nav-actions .button{font-size:12px}.footer-row{display:grid;gap:12px}}
+    .waitlist-section{background:var(--violet);color:#fff;padding:92px 0;position:relative;overflow:hidden}.waitlist-section:before{content:"";position:absolute;inset:auto -18% -55% auto;width:620px;height:620px;border-radius:50%;background:rgba(255,255,255,.12)}.waitlist-grid{position:relative;display:grid;grid-template-columns:1fr .82fr;gap:48px;align-items:center}.waitlist-section p{font-size:19px;line-height:1.5;color:rgba(255,255,255,.80);font-weight:650;max-width:720px}.form-card{background:rgba(10,10,15,.20);border:1px solid rgba(255,255,255,.24);border-radius:32px;padding:26px;backdrop-filter:blur(12px)}.form{display:grid;gap:10px}.form input{border:1px solid rgba(255,255,255,.26);background:rgba(255,255,255,.12);color:#fff;font:inherit;font-weight:800;padding:16px;border-radius:16px;outline:none}.form input::placeholder{color:rgba(255,255,255,.62)}.form button{border:0;background:#fff;color:var(--ink);border-radius:16px;padding:16px;font-weight:900;font-family:inherit;cursor:pointer}.note{font-size:12px!important;color:rgba(255,255,255,.64)!important;margin:12px 0 0!important}
+    .footer{background:var(--ink);color:var(--paper);padding:32px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.09em;color:rgba(255,250,241,.62)}.footer a{color:var(--paper)}
+
+    @media (max-width:980px){.nav-link{display:none}.brand img{width:116px}.hero-inner{grid-template-columns:1fr;padding:58px 0 86px;gap:38px}.hero-panel{min-height:560px}.hero-panel-media{height:260px}.section-head,.format-grid,.why-grid,.waitlist-grid{grid-template-columns:1fr}.desk-grid{grid-template-columns:1fr 1fr}.section{padding:70px 0}.waitlist-section{padding:70px 0}}
+    @media (max-width:640px){.inner,.nav-inner,.hero-inner{width:min(100% - 32px,var(--max))}.nav-actions .button{font-size:12px;padding:12px 14px}.kicker{font-size:11px;margin-bottom:22px}h1{font-size:clamp(42px,13vw,58px);line-height:1.04;letter-spacing:-.044em}.lead{font-size:21px;letter-spacing:-.028em}.support{font-size:16px}.hero-panel{min-height:520px;border-radius:28px}.hero-panel-content{padding:24px}.panel-top img{width:96px}.panel-title{font-size:40px}.desk-grid{grid-template-columns:1fr}.format{grid-template-columns:52px 1fr;padding:20px}.feature-card{min-height:500px}.feature-card h3{font-size:52px;bottom:128px}.feature-card p{font-size:17px}.button{width:100%}.proof span{font-size:11px}.footer-row{display:grid;gap:12px}}
   </style>
 </head>
 <body>
@@ -150,58 +106,58 @@
         <div>
           <div class="kicker"><span class="dot"></span> The Black angle on what’s happening now</div>
           <h1><span class="hero-line">What’s happening.</span><span class="hero-line">What’s moving.</span><span class="hero-line">What’s next.</span></h1>
-          <p class="lead">Culture, money, politics, tech, sports, and community — filtered for what actually matters.</p>
-          <p class="support">Black on Trend follows the people, policies, products, power moves, and cultural signals shaping Black culture now and next.</p>
+          <p class="lead">A daily signal for Black culture, power, money, technology, sports, and community.</p>
+          <p class="support">Black on Trend tracks the stories and shifts worth knowing — then filters them through context, consequence, and a clear point of view.</p>
           <div class="cta-row">
             <a class="button violet" href="https://www.instagram.com/blackontrendofficial/" target="_blank" rel="noopener">Follow @blackontrendofficial</a>
             <a class="button light" href="#weekly">Join the Weekly Signal</a>
           </div>
           <div class="proof" aria-label="Brand standards"><span>Signal first</span><span>Context always</span><span>No gossip-page energy</span></div>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="hero-image-panel"><img src="assets/hero-editorial-panel.svg" alt=""></div>
-          <div class="signal-card card-a"><b>Policy to pocket</b><p>What changes in real life.</p><small>Voting. Housing. Business. Schools. Money.</small></div>
-          <div class="signal-card card-b"><b>Before it blows up</b><p>The signal before the headline.</p><small>Early moves from culture, power, and community.</small></div>
-          <div class="phone">
-            <div class="phone-screen">
-              <div><span class="tag">Start here</span><img class="phone-logo" src="assets/wordmark-white.png" alt=""></div>
-              <div><div class="phone-title">Welcome<br>to Black<br>on Trend</div><div class="phone-sub">The Black angle on what’s happening, what’s moving, and what’s next.</div></div>
-              <div class="swipe"><span>Follow to stay ahead</span><span>→</span></div>
+        <aside class="hero-panel" aria-label="Black on Trend editorial preview">
+          <div class="hero-panel-media"><img src="assets/hero-editorial-panel.svg" alt="Abstract editorial collage representing culture, media, technology, and community signals"></div>
+          <div class="hero-panel-content">
+            <div class="panel-top"><span class="tag">Start here</span><img src="assets/wordmark-white.png" alt="Black on Trend"></div>
+            <h2 class="panel-title">The signal<br>without<br>the noise.</h2>
+            <p class="panel-copy">Not gossip. Not outrage bait. Not random viral churn. BOT follows the Black angle people should understand before the feed moves on.</p>
+            <div class="panel-list">
+              <div class="panel-item"><b>The Black Angle</b><span>Context</span></div>
+              <div class="panel-item"><b>Before It Blows Up</b><span>Early signals</span></div>
+              <div class="panel-item"><b>Policy to Pocket</b><span>Real impact</span></div>
             </div>
           </div>
-        </div>
+        </aside>
       </div>
       <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Culture</span><span>Money</span><span>Politics</span><span>Future</span><span>Sports</span><span>Community</span><span>The Black Angle</span><span>Signal Over Noise</span><span>Culture</span><span>Money</span><span>Politics</span><span>Future</span><span>Sports</span><span>Community</span><span>The Black Angle</span><span>Signal Over Noise</span></div></div>
     </section>
 
-    <section id="formats" class="showcase" aria-labelledby="formats-title">
+    <section id="formats" class="section showcase" aria-labelledby="formats-title">
       <div class="inner">
         <div class="section-head">
-          <h2 id="formats-title">Recurring formats. Real point of view.</h2>
-          <p class="section-copy">BOT is built around recognizable series people can come back to — not random posts chasing the algorithm.</p>
+          <h2 id="formats-title">Built around formats people can come back to.</h2>
+          <p class="section-copy">A strong media brand is not a random feed. BOT is structured around repeatable series with a clear job: make the important angle easier to see.</p>
         </div>
         <div class="format-grid">
           <article class="feature-card">
             <span class="feature-label">The Black Angle</span>
-            <img src="assets/wordmark-white.png" alt="">
             <h3>Signal<br>over<br>noise.</h3>
             <p>When a story moves fast, BOT slows down the right part: who it affects, why it matters, and what to watch next.</p>
           </article>
           <div class="format-list">
-            <article class="format"><div class="format-num">01</div><div><h3>The Black Angle</h3><p>The part of the story most feeds miss: power, money, culture, consequence, and community impact.</p></div></article>
+            <article class="format"><div class="format-num">01</div><div><h3>The Black Angle</h3><p>The part most feeds miss: power, money, culture, consequence, and community impact.</p></div></article>
             <article class="format"><div class="format-num">02</div><div><h3>Before It Blows Up</h3><p>Early signals from Black Twitter, creators, founders, campuses, city halls, and culture-makers.</p></div></article>
             <article class="format"><div class="format-num">03</div><div><h3>Policy to Pocket</h3><p>Politics translated into practical impact: jobs, housing, education, business, rights, and local power.</p></div></article>
-            <article class="format"><div class="format-num">04</div><div><h3>BOT Finds</h3><p>Black-owned businesses, useful products, city spots, experiences, and people worth putting on your radar.</p></div></article>
+            <article class="format"><div class="format-num">04</div><div><h3>BOT Finds</h3><p>Black-owned businesses, useful products, city spots, experiences, and people worth knowing.</p></div></article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="desks" aria-labelledby="cover-title">
+    <section class="section desks" aria-labelledby="cover-title">
       <div class="inner">
         <div class="section-head">
-          <h2 id="cover-title">What we cover.</h2>
-          <p class="section-copy">Six desks. One lens. BOT does not chase every headline — only the Black angle worth knowing.</p>
+          <h2 id="cover-title">Six desks. One lens.</h2>
+          <p class="section-copy">BOT does not chase every headline. We follow the Black angle across the areas shaping attention, opportunity, and everyday life.</p>
         </div>
         <div class="desk-grid">
           <article class="desk"><div class="desk-num">01 / CULTURE</div><h3>Culture</h3><p>Music, film, creators, art, internet culture, and the moments shaping the conversation.</p></article>
@@ -214,7 +170,7 @@
       </div>
     </section>
 
-    <section class="why" aria-labelledby="why-title">
+    <section class="section why" aria-labelledby="why-title">
       <div class="inner why-grid">
         <div>
           <h2 id="why-title">Why follow?</h2>
@@ -232,7 +188,7 @@
       <div class="inner waitlist-grid">
         <div>
           <h2 id="weekly-title">The Weekly Signal is coming.</h2>
-          <p>A short Black on Trend drop: the stories, shifts, people, and power moves worth carrying into the week. Instagram is live now. The owned list comes next.</p>
+          <p>A short Black on Trend drop with the stories, shifts, people, and power moves worth carrying into the week. Instagram is live now. The owned list comes next.</p>
           <div class="cta-row"><a class="button light" href="https://www.instagram.com/blackontrendofficial/" target="_blank" rel="noopener">Follow on Instagram</a></div>
         </div>
         <div class="form-card">
@@ -248,7 +204,7 @@
     <footer class="footer">
       <div class="inner footer-row">
         <span>Black on Trend</span>
-        <span>The Black angle on what’s happening now.</span>
+        <span>What’s happening. What’s moving. What’s next.</span>
         <a href="https://www.instagram.com/blackontrendofficial/" target="_blank" rel="noopener">@blackontrendofficial</a>
       </div>
     </footer>
